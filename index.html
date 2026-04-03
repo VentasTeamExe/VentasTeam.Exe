@@ -2,6 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- 🔥 ARREGLA EL ZOOM / DPI -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TEAM.EXE</title>
 
 <style>
@@ -11,6 +15,9 @@ body{
     font-family:Arial;
     color:white;
     overflow-x:hidden;
+
+    /* 🔥 ACERCA TODO (MEJOR VISUAL) */
+    zoom:1.05;
 }
 
 /* PARTICULAS */
@@ -37,23 +44,23 @@ body{
     flex-direction:column;
 }
 
-/* TITULO MEJORADO */
+/* TITULO MÁS PRO */
 .title{
-    font-size:30px;
+    font-size:36px;
     text-align:center;
     margin-bottom:20px;
     background:linear-gradient(90deg,#00f7ff,#0066ff);
     -webkit-background-clip:text;
     color:transparent;
-    text-shadow:0 0 10px #00f7ff;
+    text-shadow:0 0 12px #00f7ff;
 }
 
 /* BOTON ENTRAR */
 .enter-btn{
-    padding:15px 25px;
+    padding:18px 30px;
     border:none;
     border-radius:25px;
-    font-size:16px;
+    font-size:18px;
     color:white;
     cursor:pointer;
     background:linear-gradient(90deg,#00f7ff,#0066ff);
@@ -72,16 +79,17 @@ body{
     border-radius:12px;
     background:#0b1220;
     border:1px solid #00f7ff;
-    box-shadow:0 0 10px rgba(0,247,255,0.2);
+    box-shadow:0 0 12px rgba(0,247,255,0.2);
 }
 
 /* TEXTO */
 .text{
     margin:15px 0;
-    font-size:14px;
+    font-size:16px;
+    line-height:1.4;
 }
 
-/* TEXTO RGB CON BRILLO */
+/* TEXTO RGB */
 .rgb-text{
     background:linear-gradient(90deg,#00f7ff,#0066ff);
     -webkit-background-clip:text;
@@ -107,11 +115,11 @@ body{
 /* BOTON FINAL */
 .join-btn{
     margin-top:25px;
-    padding:15px;
+    padding:18px;
     width:100%;
     border:none;
     border-radius:25px;
-    font-size:15px;
+    font-size:16px;
     color:white;
     cursor:pointer;
     background:linear-gradient(90deg,#00f7ff,#0066ff);
@@ -134,8 +142,6 @@ body{
 <div class="container products" id="products">
 
 <div class="title">VENTAS MÚLTIPLES TEAM.EXE</div>
-
-<!-- (TODO TU CONTENIDO IGUAL, NO LO CAMBIÉ) -->
 
 <!-- 1 -->
 <div class="box">
@@ -234,7 +240,7 @@ DRIP CLIENTE, HG CHEATS, BR MODS, NETFLIX, DISNEY, HBOMAX ENTRE OTRAS COSAS MAS.
 <div class="img"><img src="img12.jpg"></div>
 </div>
 
-<!-- 🔥 BOTÓN FINAL AGREGADO -->
+<!-- BOTÓN FINAL -->
 <a href="https://chat.whatsapp.com/FmY5X9LeTfAHsT4TKRvQgN?mode=gi_t" target="_blank">
 <button class="join-btn">
 ÚNETE AL GRUPO SI ESTÁS INTERESADO EN COMPRAR ALGÚN PRODUCTO (TOCA PARA UNIRTE)
@@ -249,21 +255,21 @@ document.getElementById("login").style.display="none";
 document.getElementById("products").style.display="block";
 }
 
-/* PARTICULAS */
+/* PARTICULAS SUAVES */
 const canvas=document.getElementById("particles");
 const ctx=canvas.getContext("2d");
 canvas.width=innerWidth;
 canvas.height=innerHeight;
 
 let p=[];
-for(let i=0;i<60;i++){
+for(let i=0;i<50;i++){
 p.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight});
 }
 
 function draw(){
 ctx.clearRect(0,0,canvas.width,canvas.height);
 p.forEach(e=>{
-e.y+=0.3;
+e.y+=0.25;
 if(e.y>canvas.height)e.y=0;
 ctx.fillStyle="#00f7ff";
 ctx.fillRect(e.x,e.y,2,2);
