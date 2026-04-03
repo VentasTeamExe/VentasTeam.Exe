@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TEAM.EXE</title>
+
+<style>
+body{
+    margin:0;
+    background:#05080f;
+    font-family:Arial;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* PARTICULAS */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* CONTENEDOR */
+.container{
+    padding:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* LOGIN */
+.login{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+/* TITULO MEJORADO */
+.title{
+    font-size:30px;
+    text-align:center;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#00f7ff,#0066ff);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 10px #00f7ff;
+}
+
+/* BOTON ENTRAR */
+.enter-btn{
+    padding:15px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(90deg,#00f7ff,#0066ff);
+    box-shadow:0 0 15px #00f7ff;
+}
+
+/* PRODUCTOS */
+.products{
+    display:none;
+}
+
+/* CAJAS */
+.box{
+    margin-top:20px;
+    padding:15px;
+    border-radius:12px;
+    background:#0b1220;
+    border:1px solid #00f7ff;
+    box-shadow:0 0 10px rgba(0,247,255,0.2);
+}
+
+/* TEXTO */
+.text{
+    margin:15px 0;
+    font-size:14px;
+}
+
+/* TEXTO RGB CON BRILLO */
+.rgb-text{
+    background:linear-gradient(90deg,#00f7ff,#0066ff);
+    -webkit-background-clip:text;
+    color:transparent;
+    font-weight:bold;
+    text-shadow:0 0 6px #00f7ff;
+}
+
+/* IMAGEN */
+.img{
+    margin-top:10px;
+    border-radius:12px;
+    border:1px solid #00f7ff;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,247,255,0.3);
+}
+
+.img img{
+    width:100%;
+    display:block;
+}
+
+/* BOTON FINAL */
+.join-btn{
+    margin-top:25px;
+    padding:15px;
+    width:100%;
+    border:none;
+    border-radius:25px;
+    font-size:15px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(90deg,#00f7ff,#0066ff);
+    box-shadow:0 0 15px #00f7ff;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- LOGIN -->
+<div class="login" id="login">
+<div class="title">TEAM.EXE</div>
+<button class="enter-btn" onclick="enter()">TOCA AQUÍ PARA ENTRAR</button>
+</div>
+
+<!-- PRODUCTOS -->
+<div class="container products" id="products">
+
+<div class="title">VENTAS MÚLTIPLES TEAM.EXE</div>
+
+<!-- (TODO TU CONTENIDO IGUAL, NO LO CAMBIÉ) -->
+
+<!-- 1 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">TENEMOS DISPONIBLES:</span><br>
+DRIP CLIENTE, HG CHEATS, BR MODS, NETFLIX, DISNEY, HBOMAX ENTRE OTRAS COSAS MAS...
+</div>
+<div class="img"><img src="img1.jpg"></div>
+</div>
+
+<!-- 2 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">NÚMEROS VIRTUALES</span>
+</div>
+<div class="img"><img src="img2.jpg"></div>
+</div>
+
+<!-- 3 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">DRIP CLIENT</span>
+</div>
+<div class="img"><img src="img3.jpg"></div>
+</div>
+
+<!-- 4 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">CUENTAS PARA VER PELÍCULAS Y MAS..</span>
+</div>
+<div class="img"><img src="img4.jpg"></div>
+</div>
+
+<!-- 5 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">SEGUIDORES EN: IG Y TIK TOK</span>
+</div>
+<div class="img"><img src="img5.jpg"></div>
+</div>
+
+<!-- 6 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">HG CHEATS</span>
+</div>
+<div class="img"><img src="img6.jpg"></div>
+</div>
+
+<!-- 7 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">BR MODS</span>
+</div>
+<div class="img"><img src="img7.jpg"></div>
+</div>
+
+<!-- 8 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">CUBAN MODS</span>
+</div>
+<div class="img"><img src="img8.jpg"></div>
+</div>
+
+<!-- 9 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">GHOST PANEL INJECTOR ( EN MANTENIMIENTO)</span>
+</div>
+<div class="img"><img src="img9.jpg"></div>
+</div>
+
+<!-- 10 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">CUBAN RAGE PC</span>
+</div>
+<div class="img"><img src="img10.jpg"></div>
+</div>
+
+<!-- 11 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">DEATH X FF SILENT</span>
+</div>
+<div class="img"><img src="img11.jpg"></div>
+</div>
+
+<!-- 12 -->
+<div class="box">
+<div class="text">
+<span class="rgb-text">FLOURITE SOLO IPHONES 🔥</span>
+</div>
+<div class="img"><img src="img12.jpg"></div>
+</div>
+
+<!-- 🔥 BOTÓN FINAL AGREGADO -->
+<a href="https://chat.whatsapp.com/FmY5X9LeTfAHsT4TKRvQgN?mode=gi_t" target="_blank">
+<button class="join-btn">
+ÚNETE AL GRUPO SI ESTÁS INTERESADO EN COMPRAR ALGÚN PRODUCTO (TOCA PARA UNIRTE)
+</button>
+</a>
+
+</div>
+
+<script>
+function enter(){
+document.getElementById("login").style.display="none";
+document.getElementById("products").style.display="block";
+}
+
+/* PARTICULAS */
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+
+let p=[];
+for(let i=0;i<60;i++){
+p.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+p.forEach(e=>{
+e.y+=0.3;
+if(e.y>canvas.height)e.y=0;
+ctx.fillStyle="#00f7ff";
+ctx.fillRect(e.x,e.y,2,2);
+});
+requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+</body>
+</html>
